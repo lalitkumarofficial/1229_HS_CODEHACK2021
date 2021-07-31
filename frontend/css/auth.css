@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(47.47% 75.44% at 28.02% 24.56%, #FFFFFF 0%, #F3F3F3 47.92%);
+    background-attachment: fixed;
+    height: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+html::before {
+    background: url("/images/noise.jpg");
+    opacity: 5%;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-size: cover;
+    position: absolute;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #3526a7c5;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nav-inner {
+    height: min-content;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-inner #nav-brand {
+    font-family: Ubuntu;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+}
+
+#nav-inner #nav-links ol{
+    list-style: none;
+    display: inline-flex;
+}
+
+#nav-inner #nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Work Sans";
+    margin-left: 8px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.fs {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fs:first-of-type {
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+}
+
+.ch-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 100px;
+    box-shadow: 4px 4px 6px rgb(0 0 0 / 30%),
+                inset -4px -4px 6px rgb(0 0 0 / 30%),
+                inset 0 0 6px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container label {
+    font-family: Ubuntu;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.input-container input {
+    min-width: 300px;
+    width: 100%;
+    height: 30px;
+    background-color: #f3f3f3;
+    border: none;
+    box-shadow: inset 4px 4px 6px rgb(0 0 0 / 30%), inset -4px -4px 6px rgb(255 255 255);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.input-container button {
+    box-sizing: unset;
+    padding: 12px 12px;
+    margin-inline: 100px;
+    font-size: 20px;
+    font-family: 'Ubuntu';
+    margin-top: 50px;
+    background-color: #8bc34a;
+    color: #ffffff;
+    border: solid #f3f3f3;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.input-container button:hover {
+    background-color: #f3f3f3;
+    color: #8bc34a;
+    border: solid #8bc34a;
+    transition: .3s ease-in-out;
+}
+
+.input-container:last-of-type {
+    margin-top: 15px;
+    align-items: center;
+}
+
+.input-container:last-of-type a {
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+    font-family: "Fira Sans";
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.2);
+  /* background-color: #F5F5F5; */
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #555;
+}
+
+#tips {
+    font-family: Ubuntu;
+    font-size: 15px;
+    color: red;
+    box-sizing: border-box;
+    padding-inline: 25px;
+    padding-block: 15px;
+    border-radius: 10px;
+    border: 2px solid red;
+    max-width: 100%;
+    display: none;
+}
