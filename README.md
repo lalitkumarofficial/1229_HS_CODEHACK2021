@@ -1,4 +1,4 @@
 # C.O.D.E. HACK 2021
-- Design ()
-- Css and Control ( Lalit Kumar )
+- Design and Wireframe ()
+- Css and Control (Lalit Kumar)
 - Backend ()
