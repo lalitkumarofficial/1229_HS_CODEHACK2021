@@ -1,0 +1,11 @@
+0 Apple 
+1 Banana
+2 Corn
+3 Cucumber
+4 Eggplant
+5 Garlic
+6 Grapes
+7 Lettuce
+8 Potato
+9 Spinach
+10 Tomato
