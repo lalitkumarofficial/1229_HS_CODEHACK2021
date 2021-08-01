@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="/frontend/css/auth.css">
-    <link rel="stylesheet" href="/frontend/css/auth.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/sell.css">
     <title>Document</title>
 </head>
 <body>
@@ -36,25 +36,45 @@
     <div class="fs ch-center">
         <form onsubmit="event.preventDefault();" id="sellfrm">
             <div id="tips"></div>
-            <div class="input-container">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" autocomplete required>
+            <div class="inline">
+                <div>
+                    <div class="input-container">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" autocomplete required>
+                    </div>
+                    <div class="input-container">
+                        <label for="description">Item Description</label>
+                        <textarea id="description" rows="10" autocomplete required>
+                        </textarea>
+                    </div>
+                    <div class="input-container">
+                        <label for="price">Price($)</label>
+                        <input type="number" id="price" min="1" max="100">
+                    </div>
+                    <div class="input-container">
+                        <label for="age">Age(months)</label>
+                        <input type="number" id="age" min="0" max="6">
+                    </div>
+                </div>
+                <div>
+                    <div class="input-container" id="imgIn-container">
+                        <label for="title">Add An Image</label>
+                        <img width="50px" height="auto" id="imgPrev" onclick="document.getElementById('imgIn').click()"></img>
+                        We Will Try To Prefill Your Data
+                        <input id="imgIn" type="file" style="visibility:hidden" accept="image/*"/>
+                    </div>
+                </div>
             </div>
             <div class="input-container">
-                <label for="password">Password</label>
-                <input type="password" id="password" autocomplete required>
-            </div>
-            <div class="input-container">
-                <button type="submit">LOGIN</button>
-            </div>
-            <div class="input-container">
-                <a href="/frontend/signup">signup</a>
+                <button type="submit">ADD TO SHOP</button>
             </div>
         </form>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
     <script src="/frontend/main.js"></script>
     <script src="index.js"></script>
 </body>

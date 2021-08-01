@@ -109,7 +109,7 @@ form {
     margin-top: 15px;
 }
 
-.input-container input {
+.input-container input, .input-container textarea {
     min-width: 300px;
     width: 100%;
     height: 30px;
