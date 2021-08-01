@@ -22,9 +22,9 @@ document.getElementById("imgIn").addEventListener('change', function(e) {
     });
     firebase.storage().ref(window.imageLoc).put(e.target.files[0]).then((snapshot) => {
         console.log('Uploaded Image');
-        snapshot.ref.getDownloadURL().then((url) => document.getElementById("imgPrev").src = url);
+        snapshot.ref.getDownloadURL().then((url) => {document.getElementById("imgPrev").src = window.imageFileLoc = url})
         lock = false
-    })
+    });
 })
 
 document.getElementById('sellfrm').addEventListener("submit", processForm); src="/images/addImage.png"
