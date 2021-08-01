@@ -24,3 +24,6 @@ function genCard(item) {
     card.append(textB);
     return card;
 }
+
+
+
