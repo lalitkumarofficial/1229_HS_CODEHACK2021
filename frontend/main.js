@@ -18,6 +18,9 @@ authEndpoints = [
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         console.log(user);
+        if(getPres(document.location.pathname, authEndpoints)) {
+            document.location.replace("/frontend/")
+        }
     } else {
         if(getPres(document.location.pathname, authEndpoints) === false) {
             document.location.replace("/frontend/signup/")

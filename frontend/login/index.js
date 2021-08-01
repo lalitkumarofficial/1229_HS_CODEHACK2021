@@ -3,10 +3,9 @@ function processForm(e) {
     console.log({user: document.getElementById("email").value, pass: document.getElementById("password").value})
     firebase.auth().signInWithEmailAndPassword(document.getElementById("email").value, document.getElementById("password").value)
     .then((userCredential) => {
-        // Signed in 
         var user = userCredential.user;
         console.log(user);
-        // ...
+        document.location.replace("/frontend/");
     })
     .catch((error) => {
         var errorCode = error.code;
