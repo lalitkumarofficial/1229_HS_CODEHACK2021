@@ -1,6 +1,7 @@
 var firebaseConfig = {
 apiKey: "AIzaSyAs6dQhRGqMhhJlliuFto0EEOPppLxyp1o",
 authDomain: "sfhackathon-85e8b.firebaseapp.com",
+databaseURL: "https://sfhackathon-85e8b-default-rtdb.europe-west1.firebasedatabase.app",
 projectId: "sfhackathon-85e8b",
 storageBucket: "sfhackathon-85e8b.appspot.com",
 messagingSenderId: "703398999147",
@@ -11,13 +12,16 @@ measurementId: "G-WHVJ27NH21"
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 firebase.auth();
+rtdb = firebase.database();
+
 authEndpoints = [
     "/frontend/login/",
     "/frontend/signup/"
 ];
+
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        console.log(user);
+        window.user = user;
         if(getPres(document.location.pathname, authEndpoints)) {
             document.location.replace("/frontend/")
         }
