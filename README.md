@@ -1,4 +1,3 @@
 # C.O.D.E. HACK 2021
-- Design and Wireframe ()
-- Css and Control (Lalit Kumar)
-- Backend ()
+fontend contains the matter, 
+We used tensor flow for ml Camera to detect the factual name of the produce if not named by the farmer
