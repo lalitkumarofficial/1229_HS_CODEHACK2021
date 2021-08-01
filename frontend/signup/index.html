@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/auth.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="nav-inner">
+            <div id="nav-brand">
+                Med
+            </div>
+            <div id="nav-links">
+                <ol>
+                    <li>
+                        <a href="/">
+                            HOME
+                        </a>
+                        <a href="/sell/">
+                            SELL
+                        </a>
+                        <a href="/loans">
+                            LOANS
+                        </a>
+                        <a href="home/account">
+                            ACCOUNT
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+    <div class="fs ch-center">
+        <form onsubmit="event.preventDefault();" id="signupfrm">
+            <div id="tips"></div>
+            <div class="input-container">
+                <label for="name">Full Name</label>
+                <input type="text" id="uname" autocomplete required>
+            </div>
+            <div class="input-container">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" autocomplete required>
+            </div>
+            <div class="input-container">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="tel" autocomplete required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" autocomplete required>
+            </div>
+            <div class="input-container">
+                <button type="submit">SIGN UP</button>
+            </div>
+            <div class="input-container">
+                <a href="/frontend/login">login</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="/frontend/main.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
